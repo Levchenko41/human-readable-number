@@ -9,12 +9,12 @@ module.exports = function toReadable(number) {
 
     if (arrNumber.length === 3) {
         if (arrNumber[1].toString() == '1') {
-            readNumber = thrityNumber(arrNumber[0].toString()) + tenNumber(arrNumber[2].toString());
+            readNumber = thirdNumber(arrNumber[0].toString()) + tenth(arrNumber[2].toString());
             console.log(readNumber);
 
             return readNumber.replace(/ +/g, ' ').trim();
         }
-        readNumber = thrityNumber(arrNumber[0].toString()) + secondNumber(arrNumber[1].toString()) + convertNumber(arrNumber[2].toString());
+        readNumber = thirdNumber(arrNumber[0].toString()) + secondNumber(arrNumber[1].toString()) + convertNumber(arrNumber[2].toString());
         console.log(readNumber);
 
         return readNumber.replace(/ +/g, ' ').trim();;
@@ -22,7 +22,7 @@ module.exports = function toReadable(number) {
     if (arrNumber.length === 2) {
 
         if (arrNumber[0].toString() == '1') {
-            readNumber = tenNumber(arrNumber[1].toString());
+            readNumber = tenth(arrNumber[1].toString());
             console.log(readNumber);
 
             return readNumber.replace(/ +/g, ' ').trim();
@@ -40,8 +40,8 @@ module.exports = function toReadable(number) {
     return readNumber.replace(/ +/g, ' ').trim();;
 
 
-    function convertNumber(lNumber) {
-        switch (lNumber) {
+    function convertNumber(number) {
+        switch (number) {
             case '0':
                 return '';
             case '1':
@@ -66,8 +66,8 @@ module.exports = function toReadable(number) {
                 return 'ten';
         }
     }
-    function secondNumber(lNumber) {
-        switch (lNumber) {
+    function secondNumber(number) {
+        switch (number) {
             case '0':
                 return '';
             case '2':
@@ -88,8 +88,8 @@ module.exports = function toReadable(number) {
                 return 'ninety ';
         }
     }
-    function thrityNumber(lNumber) {
-        switch (lNumber) {
+    function thirdNumber(number) {
+        switch (number) {
             case '0':
                 return '';
             case '1':
@@ -112,8 +112,8 @@ module.exports = function toReadable(number) {
                 return 'nine hundred ';
         }
     }
-    function tenNumber(lNumber) {
-        switch (lNumber) {
+    function tenth(number) {
+        switch (number) {
             case '0':
                 return 'ten';
             case '1':
